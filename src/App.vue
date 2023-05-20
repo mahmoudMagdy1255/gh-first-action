@@ -1,0 +1,35 @@
+<template>
+  <img alt="Vue logo" src="./assets/logo.png">
+  <HelloWorld v-model="text" v-model:last-value="lastValue" />
+  <UserComponent />
+</template>
+
+<script>
+import HelloWorld from './components/HelloWorld.vue'
+import UserComponent from "@/components/UserComponent.vue";
+
+export default {
+  name: 'App',
+  components: {
+    UserComponent,
+    HelloWorld
+  },
+  data(){
+    return{
+      lastValue: null,
+      text: null,
+    };
+  },
+}
+</script>
+
+<style>
+#app {
+  font-family: Avenir, Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+  color: #2c3e50;
+  margin-top: 60px;
+}
+</style>
